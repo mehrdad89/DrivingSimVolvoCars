@@ -1,0 +1,99 @@
+esmini GIT REV: N/A
+esmini GIT TAG: N/A
+esmini GIT BRANCH: N/A
+esmini BUILD VERSION: 4109
+No fixed timestep specified - running in realtime speed
+Generated seed 3465426965
+Loading C:/volvosim/VolvoOpenSceSim/esmini/resources/xosc/vehicle-cut-in_cr.xosc (v1.0)
+Expr ${50/3.6} = 50/3.6 = 13.8888888889
+0 variables
+Loaded OpenDRIVE: C:/volvosim/VolvoOpenSceSim/esmini/resources/xosc/../xodr/curves.xodr
+Expr ${250/3.6} = 250/3.6 = 69.4444444444
+Expr ${$EgoStartS-30} = 150-30 = 120.0000000000
+6 parameters:
+   Speed = 13.888889
+   LaneOffset = 3.1
+   RoadID = 1
+   EgoStartS = 150
+   TargetVehicle = car_red
+   HostVehicle = car_white
+0.000: No scenegraph 3D model loaded. Generating a simplistic one...
+0.000: Adjusted OverTaker bounding box to model car_red.osgb - xyz: 1.46, 0.00, 0.77 lwh: 5.04, 2.04, 1.49
+0.000: Init Ego TeleportAction initState -> startTransition -> runningState
+0.000: Starting teleport Action
+0.000: Ego New position:
+0.000: Pos(147.35, 18.64, 0.00) Rot(0.53, 0.00, 0.00) roadId 1 laneId -1 offset 0.00 t -1.53
+0.000: Init Ego LongitudinalAction initState -> startTransition -> runningState
+0.000: Init OverTaker TeleportAction initState -> startTransition -> runningState
+0.000: Starting teleport Action
+0.000: OverTaker New position:
+0.000: Pos(119.71, 6.30, 0.00) Rot(0.32, 0.00, 0.00) roadId 1 laneId -1 offset 0.00 t -1.53
+0.000: storyBoard initState -> startTransition -> runningState
+0.000: CutInStory initState -> startTransition -> runningState
+0.000: CutInAct initState -> initToStandbyTransition -> standbyState
+0.000: AdaptiveCruiseControlAct initState -> startTransition -> runningState
+0.000: AdaptiveCruiseControlGroup initState -> startTransition -> runningState
+0.000: AdaptiveCruiseControlManeuver initState -> startTransition -> runningState
+0.000: EgoSpeedAdjustmentEvent initState -> initToStandbyTransition -> standbyState
+0.000: Init Ego TeleportAction runningState -> endTransition -> completeState
+0.000: Init Ego LongitudinalAction runningState -> endTransition -> completeState
+0.000: Init OverTaker TeleportAction runningState -> endTransition -> completeState
+0.001: Trigger /------------------------------------------------
+0.001: CutInActStart == true, 0.0010 > 0.0000 edge: none
+0.001: Trigger  ------------------------------------------------/
+0.001: CutInAct standbyState -> startTransition -> runningState
+0.001: CutInAndBrakeSequence initState -> startTransition -> runningState
+0.001: CutInManeuver initState -> startTransition -> runningState
+0.001: OverTakerStartSpeedEvent initState -> initToStandbyTransition -> standbyState
+0.001: LaneChangeEvent initState -> initToStandbyTransition -> standbyState
+0.001: CutInEvent initState -> initToStandbyTransition -> standbyState
+0.001: Trigger /------------------------------------------------
+0.001: Trigger  ------------------------------------------------/
+0.001: OverTakerStartSpeedEvent standbyState -> startTransition -> runningState
+0.001: OverTakerStartSpeedAction initState -> startTransition -> runningState
+2.948: Trigger /------------------------------------------------
+2.948: LaneChangeCondition == true, HWT: 1.00 < 1.00, edge none
+2.948: Triggering entity 0: OverTaker
+2.948: Trigger  ------------------------------------------------/
+2.948: OverTakerStartSpeedAction runningState -> endTransition -> completeState
+2.948: OverTakerStartSpeedEvent complete after 1 execution
+2.948: OverTakerStartSpeedEvent runningState -> endTransition -> completeState
+2.948: Event OverTakerStartSpeedEvent ended, overwritten by event LaneChangeEvent
+2.948: LaneChangeEvent standbyState -> startTransition -> runningState
+2.948: Action initState -> startTransition -> runningState
+5.445: Action runningState -> endTransition -> completeState
+5.445: LaneChangeEvent complete after 1 execution
+5.445: LaneChangeEvent runningState -> endTransition -> completeState
+7.032: Trigger /------------------------------------------------
+7.032: ACCStartCondition == true, HWT: 0.22 < 1.50, edge rising
+7.032: Triggering entity 0: Ego
+7.032: Trigger  ------------------------------------------------/
+7.032: EgoSpeedAdjustmentEvent standbyState -> startTransition -> runningState
+7.032: EgoSpeedAdjustmentAction initState -> startTransition -> runningState
+9.030: EgoSpeedAdjustmentAction runningState -> endTransition -> completeState
+9.030: EgoSpeedAdjustmentEvent complete after 1 execution
+9.030: EgoSpeedAdjustmentEvent runningState -> endTransition -> completeState
+9.030: AdaptiveCruiseControlManeuver runningState -> endTransition -> completeState
+9.030: AdaptiveCruiseControlGroup complete after 1 execution
+9.030: AdaptiveCruiseControlGroup runningState -> endTransition -> completeState
+9.030: AdaptiveCruiseControlAct runningState -> endTransition -> completeState
+9.528: Trigger /------------------------------------------------
+9.528: CutInCondition == true, HWT: 1.21 > 1.20, edge rising
+9.528: Triggering entity 0: Ego
+9.528: Trigger  ------------------------------------------------/
+9.528: CutInEvent standbyState -> startTransition -> runningState
+9.528: Action initState -> startTransition -> runningState
+12.295: Action runningState -> endTransition -> completeState
+12.295: CutInEvent complete after 1 execution
+12.295: CutInEvent runningState -> endTransition -> completeState
+12.295: CutInManeuver runningState -> endTransition -> completeState
+12.295: CutInAndBrakeSequence complete after 1 execution
+12.295: CutInAndBrakeSequence runningState -> endTransition -> completeState
+12.295: CutInAct runningState -> endTransition -> completeState
+12.295: CutInStory runningState -> endTransition -> completeState
+12.312: StopCondition timer 10.00s started
+22.312: StopCondition timer expired at 10.00 seconds
+22.312: Trigger /------------------------------------------------
+22.312: StopCondition == true, element: Action state: END_TRANSITION, edge: rising
+22.312: Trigger  ------------------------------------------------/
+22.312: storyBoard runningState -> stopTransition -> completeState
